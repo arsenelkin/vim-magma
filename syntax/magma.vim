@@ -2713,6 +2713,7 @@ syn match magmaError "%"
 
 syn region magmaComment oneline contains=magmaTodo start="//" end="$"
 syn region magmaComment contains=magmaTodo start="/\*" end="\*/"
+syn region magmaComment contains=magmaTodo start="{" end="}"
 
 " Repeats.
 syn keyword magmaRepeat         for to by do while repeat until break continue
@@ -2752,6 +2753,7 @@ syn keyword magmaTodo contained TODO FIXME HACK
 " Comments.
 " syn region  magmaComment      oneline contains=magmaTodo start="/*"  end="*/"
 " syn region  magmaComment      oneline contains=magmaTodo start="//"  end="\n"
+" syn region  magmaComment      oneline contains=magmaTodo start="{"  end="}"
 
 if version >= 508 || !exists("did_ada_syn_inits")
     if version < 508
