@@ -2730,9 +2730,10 @@ syn match magmaException        "\<end\s\+try\>"
 
 " These keywords begin various constructs, and you _might_ want to
 " highlight them differently.
-syn keyword magmaFunction       function procedure
+syn keyword magmaFunction       function procedure intrinsic
 syn match magmaFunction         "\<end\s\+function\>"
 syn match magmaFunction         "\<end\s\+procedure\>"
+syn match magmaFunction         "\<end\s\+intrinsic\>"
 
 " String and character constants.
 syn region  magmaString         start=+L\="+ skip=+\\\\\|\\"+ end=+"+
@@ -2741,7 +2742,7 @@ syn match   magmaCharacter      "'.'"
 " Other keywords
 syn keyword magmaKeyword assert assert2 assert3 assigned cat clear declare
 syn keyword magmaKeyword default delete diff error eval exists exit forall
-syn keyword magmaKeyword forward fprintf freeze iload import intrinsic is join
+syn keyword magmaKeyword forward fprintf freeze iload import is join
 syn keyword magmaKeyword load local meet print printf quit random read readi
 syn keyword magmaKeyword require requirege requirerange restore return save
 syn keyword magmaKeyword sdiff time to vprint vprintf vtime where
